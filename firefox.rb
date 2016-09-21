@@ -1,5 +1,5 @@
 require "selenium-webdriver"
-# TODO: use profile
-driver = Selenium::WebDriver.for :firefox
+profile = Selenium::WebDriver::Firefox::Profile.new
+driver = Selenium::WebDriver.for :firefox, :profile => profile
 driver.navigate.to "http://google.com"
 driver.quit
